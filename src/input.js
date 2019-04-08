@@ -47,17 +47,6 @@ var rects = d3.select(id).select("svg").selectAll(".input")
 			.attr("height", function(d){
 				return 0;
 			})
-			.on("mouseover", function(d,i){
-				d3.select(this)
-					.attr("fill",'yellow');
-
-			})
-			.on("mouseout",function(d,i){
-				d3.select(this)
-					.transition()
-					.duration(800)
-					.attr("fill",colorScale(d));
-			})
 			.attr("opacity", 0.8)
 			.transition()
 			.delay(function(d,i){
